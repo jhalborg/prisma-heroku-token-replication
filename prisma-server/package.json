@@ -1,0 +1,10 @@
+{
+  "name": "prisma-server",
+  "license": "UNLICENSED",
+  "private": true,
+  "scripts": {
+    "deploy-CI:stage": "yarn heroku:stage && yarn heroku:release",
+    "heroku:stage": "sh ./build.sh 1.20.4-heroku YOUR_APP_NAME",
+    "heroku:release": "heroku container:release web -a YOUR_APP_NAME"
+  }
+}
